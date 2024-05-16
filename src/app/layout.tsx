@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar isSignedIn />
+        <NavBar isSignedIn={false} />
         <Auth>
         {children}
         </Auth>
