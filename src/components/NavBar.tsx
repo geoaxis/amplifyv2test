@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { Hub } from "aws-amplify/utils";
 import { auth } from '@/amplify/auth/resource';
 
-export default function NavBar({isSignedIn}: {isSignedIn: boolean}){
+export default  function NavBar({isSignedIn}: {isSignedIn: boolean}){
 
     const [authCheck , setAuthCheck]= useState(isSignedIn);
     console.log("isSignedIn", isSignedIn);
