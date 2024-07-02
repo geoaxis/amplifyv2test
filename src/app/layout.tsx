@@ -18,11 +18,17 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar isSignedIn={await isAuthenticated} />
+        <>
+          {await isAuthenticated ? (
+            <NavBar isSignedIn={true} />
+          ) : (
+            <NavBar isSignedIn={false} />
+          )}
+        </>
         <Auth>
-        {children}
+          {children}
         </Auth>
-        </body>
+      </body>
     </html>
   );
 }
